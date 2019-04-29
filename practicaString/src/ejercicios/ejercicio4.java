@@ -38,19 +38,21 @@ public class ejercicio4 {
 		21234567 dividido entre 23 tiene como resto 1 por lo que la letra
 		de este NIE sería la R. El NIE sería Z1234567R.*/
 		int numNIE;
+		String nuevaLetra="";
 		char Primeraletra=nie.charAt(0);
+		if (Primeraletra=='X'){
+			nuevaLetra="0";	
+			}
+		if (Primeraletra=='Y'){
+			nuevaLetra="1";
+			}
+		if (Primeraletra=='Z'){
+			nuevaLetra="2";
+			}
 		char letraNIE = nie.charAt(nie.length() - 1);
-		numNIE = Integer.parseInt(nie.substring(0, nie.length() - 1));
-		if (nie.charAt(0)=='X'){
-		Primeraletra=0;	
-		}
-		if (nie.charAt(0)=='Y'){
-		Primeraletra=1;
-		}
-		if (nie.charAt(0)=='Z'){
-		Primeraletra=2;
-		}
-		if (letras.charAt(numNIE % 23) == letraNIE) {
+		numNIE = Integer.parseInt(nuevaLetra + nie.substring(1, nie.length() - 1));
+		
+		if (letras.charAt((numNIE) % 23) == letraNIE) {
 			return nie;
 		} else {
 			return "No valido";
