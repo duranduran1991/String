@@ -8,7 +8,6 @@ public class ejercicio4 {
 	 * función para validarlo
 	 */
 	private final static String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-	private final static String letrasnie= "XYZ";
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String dni,nie;
@@ -34,9 +33,6 @@ public class ejercicio4 {
 		
 	}
 	public static String validarNie(String nie) {
-		/*Para el siguiente NIE: Z1234567 se sustituye la Z por 2 quedando: 
-		21234567 dividido entre 23 tiene como resto 1 por lo que la letra
-		de este NIE sería la R. El NIE sería Z1234567R.*/
 		int numNIE;
 		String nuevaLetra="";
 		char Primeraletra=nie.charAt(0);
